@@ -77,25 +77,19 @@
     <th>
     </th>
   </tr>
-
-  <% matching_characters = @the_actor.characters %>
-
-  <% matching_characters.each do |a_character| %>
-    <% the_movie = a_character.movie %>
+  <% @the_actor.characters.each do |a_character| %>
 
     <tr>
       <td>
-        <%= the_movie.title %>
+        <%= a_character.movie.title %>
       </td>
 
       <td>
-        <%= the_movie.year %>
+        <%= a_character.movie.year %>
       </td>
 
       <td>
-        <% the_director = the_movie.director %>
-
-        <%= the_director.name %>
+        <%= a_character.movie.director.name %>
       </td>
 
       <td>
